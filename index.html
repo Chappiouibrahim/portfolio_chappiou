@@ -531,7 +531,7 @@
         /* ===== CERTIFICATIONS ===== */
         .cert-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1rem;
         }
 
@@ -555,11 +555,23 @@
             color: #f4b942;
             font-size: 1.1rem;
             width: 1.5rem;
+            flex-shrink: 0;
         }
 
-        .cert-item span {
+        .cert-item .cert-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cert-item .cert-name {
             font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 600;
+            color: #0b1a2f;
+        }
+
+        .cert-item .cert-org {
+            font-size: 0.7rem;
+            color: #4a5d74;
         }
 
         /* ===== PROJETS ===== */
@@ -789,7 +801,7 @@
             border: 1px solid rgba(255, 71, 87, 0.2);
         }
 
-        /* ===== CONTACT INFOS EN BAS (simplifié) ===== */
+        /* ===== CONTACT INFOS EN BAS ===== */
         .contact-bottom {
             margin-top: 2rem;
             padding-top: 2rem;
@@ -977,6 +989,10 @@
                 gap: 0.8rem;
                 align-items: center;
             }
+
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1038,7 +1054,7 @@
                     <a href="#contact" class="btn-primary">
                         <i class="fas fa-paper-plane"></i> Me contacter
                     </a>
-                    <a href="#" class="btn-secondary" onclick="generateCV()">
+                    <a href="cv-ibrahim-chappiou.pdf" download class="btn-secondary">
                         <i class="fas fa-download"></i> Télécharger mon CV
                     </a>
                 </div>
@@ -1048,8 +1064,8 @@
                         <div class="label">Projets livrés</div>
                     </div>
                     <div class="stat" data-aos="fade-up" data-aos-delay="200">
-                        <div class="number">6</div>
-                        <div class="label">Technologies</div>
+                        <div class="number">10+</div>
+                        <div class="label">Compétences</div>
                     </div>
                     <div class="stat" data-aos="fade-up" data-aos-delay="300">
                         <div class="number">100%</div>
@@ -1182,7 +1198,16 @@
                     <span class="tag">Dart</span>
                     <span class="tag">Google Workspace</span>
                     <span class="tag">VS Code</span>
-                    <span class="tag">Figma</span>
+                </div>
+            </div>
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+                <h4><i class="fas fa-paint-brush"></i> Design &amp; Analyse</h4>
+                <div class="skill-tags">
+                    <span class="tag">🎬 Montage vidéo</span>
+                    <span class="tag">🎨 Figma</span>
+                    <span class="tag">📊 Google Analytics</span>
+                    <span class="tag">📈 Analyse de données</span>
+                    <span class="tag">📉 Statistiques</span>
                 </div>
             </div>
         </div>
@@ -1225,16 +1250,83 @@
             <div class="line"></div>
         </div>
         <div class="cert-grid">
-            <div class="cert-item" data-aos="fade-up"><i class="fas fa-certificate"></i><span>Full-Stack Web & Mobile (OIF D-CLIC)</span></div>
-            <div class="cert-item" data-aos="fade-up" data-aos-delay="50"><i class="fas fa-certificate"></i><span>Digital Building Installation (Engausa Global)</span></div>
-            <div class="cert-item" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-certificate"></i><span>Intermediate English — Kamfa Academy</span></div>
-            <div class="cert-item" data-aos="fade-up" data-aos-delay="150"><i class="fas fa-certificate"></i><span>Marketing Numérique — OIF</span></div>
-            <div class="cert-item" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-certificate"></i><span>AI Fundamentals — Google (Coursera)</span></div>
-            <div class="cert-item" data-aos="fade-up" data-aos-delay="250"><i class="fas fa-certificate"></i><span>Python Programming — Microsoft</span></div>
-            <div class="cert-item" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-certificate"></i><span>Cybersécurité Web — IMT / ENSSAT</span></div>
-            <div class="cert-item" data-aos="fade-up" data-aos-delay="350"><i class="fas fa-certificate"></i><span>WordPress — Coursera Project Network</span></div>
-            <div class="cert-item" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-certificate"></i><span>Introduction to Cybersecurity — Cisco</span></div>
-            <div class="cert-item" data-aos="fade-up" data-aos-delay="450"><i class="fas fa-certificate"></i><span>SecNumAcadémie — ANSSI</span></div>
+            <div class="cert-item" data-aos="fade-up">
+                <i class="fas fa-certificate"></i>
+                <div class="cert-info">
+                    <span class="cert-name">Full-Stack Web & Mobile</span>
+                    <span class="cert-org">Organisation Internationale de la Francophonie (OIF)</span>
+                </div>
+            </div>
+            <div class="cert-item" data-aos="fade-up" data-aos-delay="50">
+                <i class="fas fa-certificate"></i>
+                <div class="cert-info">
+                    <span class="cert-name">Digital Building Installation</span>
+                    <span class="cert-org">Engausa Global Tech Hub (Nigeria)</span>
+                </div>
+            </div>
+            <div class="cert-item" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-certificate"></i>
+                <div class="cert-info">
+                    <span class="cert-name">Intermediate English</span>
+                    <span class="cert-org">Kamfa English Academy (Nigeria)</span>
+                </div>
+            </div>
+            <div class="cert-item" data-aos="fade-up" data-aos-delay="150">
+                <i class="fas fa-certificate"></i>
+                <div class="cert-info">
+                    <span class="cert-name">Marketing Numérique</span>
+                    <span class="cert-org">Organisation Internationale de la Francophonie (OIF)</span>
+                </div>
+            </div>
+            <div class="cert-item" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-certificate"></i>
+                <div class="cert-info">
+                    <span class="cert-name">AI Fundamentals</span>
+                    <span class="cert-org">Google (Coursera)</span>
+                </div>
+            </div>
+            <div class="cert-item" data-aos="fade-up" data-aos-delay="250">
+                <i class="fas fa-certificate"></i>
+                <div class="cert-info">
+                    <span class="cert-name">Python Programming</span>
+                    <span class="cert-org">Microsoft (Coursera)</span>
+                </div>
+            </div>
+            <div class="cert-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-certificate"></i>
+                <div class="cert-info">
+                    <span class="cert-name">Cybersécurité Web</span>
+                    <span class="cert-org">Institut Mines-Télécom / ENSSAT</span>
+                </div>
+            </div>
+            <div class="cert-item" data-aos="fade-up" data-aos-delay="350">
+                <i class="fas fa-certificate"></i>
+                <div class="cert-info">
+                    <span class="cert-name">WordPress Website Development</span>
+                    <span class="cert-org">Coursera Project Network</span>
+                </div>
+            </div>
+            <div class="cert-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-certificate"></i>
+                <div class="cert-info">
+                    <span class="cert-name">Introduction to Cybersecurity</span>
+                    <span class="cert-org">Cisco Networking Academy</span>
+                </div>
+            </div>
+            <div class="cert-item" data-aos="fade-up" data-aos-delay="450">
+                <i class="fas fa-certificate"></i>
+                <div class="cert-info">
+                    <span class="cert-name">SecNumAcadémie</span>
+                    <span class="cert-org">ANSSI (France)</span>
+                </div>
+            </div>
+            <div class="cert-item" data-aos="fade-up" data-aos-delay="500">
+                <i class="fas fa-certificate"></i>
+                <div class="cert-info">
+                    <span class="cert-name">Formations Numériques</span>
+                    <span class="cert-org">OpenClassrooms</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1407,7 +1499,7 @@
                 <div id="formFeedback" class="form-feedback"></div>
             </div>
 
-            <!-- ===== CONTACT INFOS EN BAS (simplifié) ===== -->
+            <!-- ===== CONTACT INFOS EN BAS ===== -->
             <div class="contact-bottom" data-aos="fade-up" data-aos-delay="200">
                 <div class="contact-details">
                     <span><i class="fas fa-envelope"></i> <a href="mailto:chappiouibrahim@gmail.com">chappiouibrahim@gmail.com</a></span>
@@ -1431,7 +1523,7 @@
         </div>
         <p>© 2026 Ibrahim Hassane Chappiou. Tous droits réservés.</p>
         <div class="whatsapp-numbers">
-            <i class="fab fa-whatsapp"></i> +227 99 71 55 56 &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> +228 90 30 02 49
+            <i class="fab fa-whatsapp"></i> +227 99 71 55 56
         </div>
     </footer>
 
@@ -1563,77 +1655,6 @@
                 formFeedback.textContent = '';
             }, 8000);
         });
-
-        // ===== GENERATE CV =====
-        function generateCV() {
-            const cvContent = `
-        ===== IBRAHIM HASSANE CHAPPIOU =====
-        Ingénieur en Génie Électrique & Développeur Full-Stack
-
-        📧 chappiouibrahim@gmail.com
-        🌐 https://chappiouibrahim.github.io/portfolio_chappiou/
-        🐙 github.com/Chappiouibrahim
-        🔗 linkedin.com/in/ibrahim-hassane-chappiou-725285280
-        📱 WhatsApp: +227 99 71 55 56
-
-        --- PROFIL ---
-        Développeur Full-Stack et ingénieur en génie électrique, passionné par le développement d'applications web et mobiles, la cybersécurité et les technologies innovantes. Double compétence en solutions numériques et énergétiques.
-
-        --- PROJETS RÉALISÉS ---
-        • GenTrack — Application web de suivi des groupes électrogènes
-        • Météo Flutter — Prévisions météo avec API OpenWeather
-        • Lieux favoris — Application Flutter de gestion d'endroits
-        • EcoTrack API — Backend Laravel 9 pour actions écologiques
-        • EcoTrack Frontend — Interface React/Vite pour EcoTrack
-        • Nabila Pressing & Couture — Site vitrine
-        • Chappiou Tech — Site vitrine de démonstration
-
-        --- EXPÉRIENCES ---
-        • Développeur Full-Stack Web & Mobile — OIF / D-CLIC (2025-2026)
-        • Technicien & Formateur — Engausa Global Tech Hub (2024-2025)
-        • Stage Électrotechnique — Tech+ Lomé (2024)
-        • Stagiaire Maintenance — Manutention Africaine (2021)
-
-        --- COMPÉTENCES ---
-        Web: HTML5, CSS3, JavaScript, React, Vite, PHP, Laravel, Node.js, WordPress
-        Mobile: Flutter, React Native, Riverpod
-        BDD: MySQL, PostgreSQL, SQLite, Firebase
-        Énergie: PV solaire, groupes électrogènes, électricité bâtiment, AutoCAD, MATLAB
-        Cyber: Analyse vulnérabilités, sécurité réseau, caméra, intelligence artificielle
-        Langages: Python, JavaScript, PHP, Dart
-
-        --- ÉDUCATION ---
-        • Ingénieur Recherche en Génie Électrique — Centre d'Excellence Régional pour la Maîtrise de l'Électricité
-        • Master en Electromécanique — CET-ASNI
-        • Licence Pro Electromécanique — IUT Maradi
-        • DUT Génie Industriel — IUT Maradi
-
-        --- CERTIFICATIONS ---
-        Full-Stack Web & Mobile (OIF), Digital Building Installation, AI Fundamentals (Google), Python (Microsoft), Cybersécurité Web (IMT), SecNumAcadémie (ANSSI), Introduction to Cybersecurity (Cisco)
-
-        --- LANGUES ---
-        Français (Très bien), Haoussa (Très bien), Anglais (Intermédiaire)
-
-        Références disponibles sur demande.
-        `;
-
-            const blob = new Blob([cvContent], { type: 'text/plain;charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'CV_Ibrahim_Hassane_Chappiou.txt';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-
-            const btn = document.querySelector('.btn-secondary');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-check"></i> CV téléchargé !';
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-            }, 3000);
-        }
     </script>
 </body>
 </html>
